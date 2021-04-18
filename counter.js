@@ -1,25 +1,29 @@
-  function createCounter() {
-      const counterObject = {
-          value: 0,
+function createCounter() {
+    const counterObject = {
+        value: 0,
 
-          increment: function() {
-              this.value++;
-          },
+        increment: function() {
+            this.value++;
+        },
 
-          incrementBy: function(amount) {
-              this.value += amount;
-          },
+        incrementBy: function(amount) {
+            this.value += amount;
+        },
 
-          decrement: function() {
-              this.value--;
-          },
+        decrement: function() {
+            this.value--;
+        },
 
-          print: function() {
-              console.log(this.value);
-          }
-      }
+        print: function() {
+            console.log(this.value);
+        },
 
-      return counterObject;
-  }
+        reset: function() {
+            this.value = 0;
+        }
+    }
 
-  const counter = createCounter();
+    return counterObject;
+}
+
+const counter = createCounter();
